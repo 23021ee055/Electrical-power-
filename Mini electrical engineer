@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+public class ElectricalToolkit {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("===== Electrical Engineering Toolkit =====");
+        System.out.println("1. Ohm's Law");
+        System.out.println("2. Power Calculator");
+        System.out.println("3. Series Resistance");
+        System.out.println("4. Parallel Resistance");
+
+        System.out.print("Enter your choice: ");
+        int choice = sc.nextInt();
+
+        switch (choice) {
+
+            case 1:
+                System.out.print("Enter Voltage (V): ");
+                double v = sc.nextDouble();
+
+                System.out.print("Enter Resistance (Ohm): ");
+                double r = sc.nextDouble();
+
+                double current = v / r;
+                System.out.println("Current = " + current + " A");
+                break;
+
+            case 2:
+                System.out.print("Enter Voltage (V): ");
+                double voltage = sc.nextDouble();
+
+                System.out.print("Enter Current (A): ");
+                double i = sc.nextDouble();
+
+                double power = voltage * i;
+                System.out.println("Power = " + power + " W");
+                break;
+
+            case 3:
+                System.out.print("Enter R1: ");
+                double r1 = sc.nextDouble();
+
+                System.out.print("Enter R2: ");
+                double r2 = sc.nextDouble();
+
+                System.out.println("Series Resistance = "
+                        + (r1 + r2) + " Ohm");
+                break;
+
+            case 4:
+                System.out.print("Enter R1: ");
+                double rp1 = sc.nextDouble();
+
+                System.out.print("Enter R2: ");
+                double rp2 = sc.nextDouble();
+
+                double parallel = (rp1 * rp2) / (rp1 + rp2);
+
+                System.out.println("Parallel Resistance = "
+                        + parallel + " Ohm");
+                break;
+
+            default:
+                System.out.println("Invalid choice!");
+        }
+
+        sc.close();
+    }
+}
