@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class DCGeneratorEMF {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("===== DC Generator EMF Calculator =====");
+
+        System.out.print("Enter Number of Poles (P): ");
+        double P = sc.nextDouble();
+
+        System.out.print("Enter Flux per Pole (Wb): ");
+        double flux = sc.nextDouble();
+
+        System.out.print("Enter Total Armature Conductors (Z): ");
+        double Z = sc.nextDouble();
+
+        System.out.print("Enter Speed (RPM): ");
+        double N = sc.nextDouble();
+
+        System.out.print("Enter Number of Parallel Paths (A): ");
+        double A = sc.nextDouble();
+
+        double emf = (P * flux * Z * N) / (60 * A);
+
+        System.out.println("--------------------------------");
+        System.out.println("Generated EMF = " + emf + " V");
+        System.out.println("--------------------------------");
+
+        sc.close();
+    }
+}
