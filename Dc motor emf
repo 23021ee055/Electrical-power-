@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class DCGeneratorEMF {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Number of Poles (P): ");
+        double p = sc.nextDouble();
+
+        System.out.print("Enter Flux per Pole (Wb): ");
+        double flux = sc.nextDouble();
+
+        System.out.print("Enter Total Conductors (Z): ");
+        double z = sc.nextDouble();
+
+        System.out.print("Enter Speed (RPM): ");
+        double n = sc.nextDouble();
+
+        System.out.print("Enter Number of Parallel Paths (A): ");
+        double a = sc.nextDouble();
+
+        double emf = (p * flux * z * n) / (60 * a);
+
+        System.out.println("Generated EMF = " + emf + " V");
+
+        sc.close();
+    }
+}
