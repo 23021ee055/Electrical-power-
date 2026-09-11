@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class ACImpedance {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Resistance R (Ohms): ");
+        double r = sc.nextDouble();
+
+        System.out.print("Enter Inductance L (Henry): ");
+        double l = sc.nextDouble();
+
+        System.out.print("Enter Frequency f (Hz): ");
+        double f = sc.nextDouble();
+
+        double xl = 2 * Math.PI * f * l;
+        double impedance = Math.sqrt((r * r) + (xl * xl));
+
+        System.out.println("Inductive Reactance = " + xl + " Ohms");
+        System.out.println("Impedance = " + impedance + " Ohms");
+
+        sc.close();
+    }
+}
