@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class FaradaysLaw {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Number of Turns (N): ");
+        double n = sc.nextDouble();
+
+        System.out.print("Enter Change in Flux (Wb): ");
+        double flux = sc.nextDouble();
+
+        System.out.print("Enter Change in Time (seconds): ");
+        double time = sc.nextDouble();
+
+        double emf = n * flux / time;
+
+        System.out.println("Induced EMF = " + emf + " V");
+
+        sc.close();
+    }
+}
