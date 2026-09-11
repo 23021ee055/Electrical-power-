@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class ThreePhasePower {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Line Voltage (V): ");
+        double voltage = sc.nextDouble();
+
+        System.out.print("Enter Line Current (A): ");
+        double current = sc.nextDouble();
+
+        System.out.print("Enter Power Factor: ");
+        double pf = sc.nextDouble();
+
+        double power = Math.sqrt(3) * voltage * current * pf;
+
+        System.out.println("Three-Phase Power = " + power + " W");
+
+        sc.close();
+    }
+}
