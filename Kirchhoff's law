@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class KirchhoffLaw {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Incoming Current I1: ");
+        double i1 = sc.nextDouble();
+
+        System.out.print("Enter Incoming Current I2: ");
+        double i2 = sc.nextDouble();
+
+        System.out.print("Enter Outgoing Current I3: ");
+        double i3 = sc.nextDouble();
+
+        double incoming = i1 + i2;
+        double outgoing = i3;
+
+        System.out.println("Total Incoming Current = " + incoming + " A");
+        System.out.println("Total Outgoing Current = " + outgoing + " A");
+
+        if (Math.abs(incoming - outgoing) < 0.0001)
+            System.out.println("Kirchhoff's Current Law is satisfied.");
+        else
+            System.out.println("KCL is not satisfied.");
+
+        sc.close();
+    }
+}
