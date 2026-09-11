@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class BatteryBackup {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Battery Capacity (Ah): ");
+        double capacity = sc.nextDouble();
+
+        System.out.print("Enter Load Current (A): ");
+        double current = sc.nextDouble();
+
+        double backupTime = capacity / current;
+
+        System.out.println("Estimated Battery Backup Time = "
+                + backupTime + " hours");
+
+        sc.close();
+    }
+}
