@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class ResistanceCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter R1: ");
+        double r1 = sc.nextDouble();
+
+        System.out.print("Enter R2: ");
+        double r2 = sc.nextDouble();
+
+        double series = r1 + r2;
+        double parallel = (r1 * r2) / (r1 + r2);
+
+        System.out.println("Series Resistance = " + series + " Ohms");
+        System.out.println("Parallel Resistance = " + parallel + " Ohms");
+
+        sc.close();
+    }
+}
