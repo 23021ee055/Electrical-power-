@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class StarToDelta {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter R1: ");
+        double r1 = sc.nextDouble();
+
+        System.out.print("Enter R2: ");
+        double r2 = sc.nextDouble();
+
+        System.out.print("Enter R3: ");
+        double r3 = sc.nextDouble();
+
+        double sum = r1 * r2 + r2 * r3 + r3 * r1;
+
+        double R12 = sum / r3;
+        double R23 = sum / r1;
+        double R31 = sum / r2;
+
+        System.out.println("Delta Resistance R12 = " + R12 + " Ohm");
+        System.out.println("Delta Resistance R23 = " + R23 + " Ohm");
+        System.out.println("Delta Resistance R31 = " + R31 + " Ohm");
+
+        sc.close();
+    }
+}
