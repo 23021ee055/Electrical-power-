@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class DCMotorSpeed {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Supply Voltage (V): ");
+        double v = sc.nextDouble();
+
+        System.out.print("Enter Armature Current (A): ");
+        double ia = sc.nextDouble();
+
+        System.out.print("Enter Armature Resistance (Ohm): ");
+        double ra = sc.nextDouble();
+
+        System.out.print("Enter Motor Constant K: ");
+        double k = sc.nextDouble();
+
+        System.out.print("Enter Flux (Wb): ");
+        double flux = sc.nextDouble();
+
+        double speed = (v - ia * ra) / (k * flux);
+
+        System.out.println("Motor Speed = " + speed + " RPM");
+
+        sc.close();
+    }
+}
