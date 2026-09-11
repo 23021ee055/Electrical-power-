@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class PowerFactor {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Real Power (W): ");
+        double power = sc.nextDouble();
+
+        System.out.print("Enter Voltage (V): ");
+        double voltage = sc.nextDouble();
+
+        System.out.print("Enter Current (A): ");
+        double current = sc.nextDouble();
+
+        double apparentPower = voltage * current;
+        double pf = power / apparentPower;
+
+        System.out.println("Apparent Power = " + apparentPower + " VA");
+        System.out.println("Power Factor = " + pf);
+
+        sc.close();
+    }
+}
